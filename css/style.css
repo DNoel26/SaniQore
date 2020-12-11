@@ -333,7 +333,7 @@ nav a
     padding-left: 15px;
 }
 
-.top-nav li:last-of-type::after
+.top-nav li:last-of-type::after, .top-nav li:last-of-type::before
 {
     display: none;
 }
@@ -415,9 +415,20 @@ ul li
 {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -8px;
     left: 0;
-    transition: all 0.2s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+    font-weight: 700;
+}
+
+.bottom-nav ul a::before
+{
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 0;
+    transition: all 0.15s ease-in-out 0.2s;
     font-weight: 700;
 }
 
@@ -432,7 +443,7 @@ nav .inner-container .active-link::after
     border-bottom: 2px solid var(--theme-colour-3-dark);
 }
 
-.bottom-nav ul li:last-of-type a::after
+.bottom-nav ul li:last-of-type a::after, .bottom-nav ul li:last-of-type a::before
 {
     content: none;
 }
@@ -451,6 +462,12 @@ nav .inner-container .active-link::after
 {
     width: 67%;
     border-bottom: 2px solid var(--theme-colour-3);
+}
+
+.bottom-nav ul a:hover::before
+{
+    width: 67%;
+    border-top: 2px solid var(--theme-colour-3);
 }
 
 /*.bottom-nav ul li:last-of-type a
@@ -474,9 +491,9 @@ nav .inner-container .active-link::after
 footer
 {
     height: 800px;
-    background: linear-gradient(rgba(44,114,43,0),rgba(44,114,43,0.8)), url("/img/water_drop_border.png") no-repeat;
-    background-size: 120%;
-    background-position: 50% 0%;
+    background: linear-gradient(rgba(0,0,0,0.67),rgba(44,114,43,0.67)), url("/img/water_drop.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
 }
 
 footer .inner-container > form, footer .inner-container > div
@@ -499,10 +516,12 @@ footer .inner-container > div:first-of-type h2
 
 footer form
 {
-    background: linear-gradient(rgba(245,245,245,0.15), rgba(245,245,245,0.15));
+    background: linear-gradient(rgba(245,245,245,0), rgba(245,245,245,0));
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 32px;
+    background-position: center center;
+    color: var(--theme-colour-2);
 }
 
 footer h2
@@ -514,6 +533,7 @@ footer h2
     margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--theme-colour-2);
 }
 
 footer form h2::after
@@ -525,7 +545,7 @@ footer form h2::after
     bottom: -8px;
     width: 64px;
     margin: auto;
-    border-bottom: 3px solid var(--theme-colour-1);
+    border-bottom: 2px solid var(--theme-colour-2);
 }
 
 footer form i
@@ -548,7 +568,7 @@ footer form > div
 footer form label
 {
     display: block;
-    color: var(--theme-colour-1);
+    color: inherit;
     font-weight: 600;
 }
 
@@ -577,8 +597,22 @@ form button
 
 section
 {
-    margin-bottom: 112px;
+    margin-bottom: 160px;
 }
+
+/*section::after
+{
+    position: absolute;
+    content: "";
+    margin-top: 109px;
+    border-bottom: 8px solid var(--theme-colour-3-dark);
+    border-radius: 8px;
+    width: 25vw;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}*/
 
 section .container, section .inner-container
 {
