@@ -490,16 +490,47 @@ nav .inner-container .active-link::after
 
 footer
 {
-    height: 800px;
+    height: 880px;
     background: linear-gradient(rgba(0,0,0,0.67),rgba(44,114,43,0.67)), url("/img/water_drop.jpg") no-repeat;
     background-size: cover;
     background-position: 50% 40%;
 }
 
+footer .inner-container
+{
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+footer .top-nav li
+{
+    line-height: 48px;
+}
+
+footer p, footer i
+{
+    color: var(--theme-colour-2);
+    font-size: 1rem;
+}
+
+footer p:first-of-type
+{
+    margin-top: 48px;
+    margin-bottom: 0;
+}
+
+footer p
+{
+    margin-top: 16px;
+    text-align: center;
+}
+
+/*footer .inner-container > form
+{
+    grid-column: span 1;
+}*/
+
 footer .inner-container > form, footer .inner-container > div
 {
-    margin-top: 64px;
-    font-size: 0.9rem;
     max-height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -512,6 +543,11 @@ footer .inner-container > div:first-of-type h2
     padding: 4px 8px;
     border: 2px solid var(--theme-colour-2);
     border-radius: 16px;
+}
+
+footer .inner-container > div:first-of-type h2::after
+{
+    content: none;
 }
 
 footer form
@@ -536,7 +572,7 @@ footer h2
     color: var(--theme-colour-2);
 }
 
-footer form h2::after
+footer h2::after
 {
     content: "";
     position: absolute;
@@ -569,12 +605,12 @@ footer form label
 {
     display: block;
     color: inherit;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 footer form > div:first-of-type > label
 {
-    padding-top: 8px;  
+    padding-top: 32px;  
 }
 
 footer form input, footer form select, footer form textarea
@@ -586,11 +622,38 @@ footer form input, footer form select, footer form textarea
     font-family: inherit;
     border: 1px solid rgba(5,13,5,0.33);
     border-radius: 8px;
+    position: relative;
 }
 
 form button
 {
+    display: block;
     margin-bottom: 16px;
+    width: 98%;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .top-nav a
+{
+    color: var(--theme-colour-2);
+}
+
+footer .top-nav a:hover
+{
+    color: var(--theme-colour-2);
+}
+
+footer .top-nav
+{
+    border-bottom: 1px solid  rgba(250,242,250,0.16);
+}
+
+footer .top-nav li::after
+{
+    content: "";
+    border-right: 1px solid  rgba(250,242,250,0.16);
 }
 
 /*****BODY*****/
@@ -1235,4 +1298,9 @@ section .big-icon
 .section-5 .inner-container > a:hover
 {
     background-color: var(--theme-colour-1);
+}
+
+.section-5 .inner-container i
+{
+    color: var(--theme-colour-2);
 }
