@@ -488,6 +488,7 @@ ul li
     width: 0;
     transition: all 0.15s ease-in-out 0.2s;
     font-weight: 700;
+    border-top: 2px solid var(--theme-colour-3);   
 }
 
 nav .inner-container .active-link
@@ -526,7 +527,6 @@ nav .inner-container .active-link::after
 .bottom-nav ul a:hover::before, .bottom-nav ul a:focus::before
 {
     width: 67%;
-    border-top: 2px solid var(--theme-colour-3);
 }
 
 /*.bottom-nav ul li:last-of-type a
