@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="home-html">
+<html lang="en" id="home-html" class="home-html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
             family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&
             family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css">
-        <title>SaniQore | Homepage</title>
+        <title>SaniQore | Home | Residential and Commercial Cleaning Services.</title>
     </head>
     <body>
         <header>
@@ -30,7 +30,10 @@
                 <div class="container">
                     <div class="grid inner-container grid-ctr-items">
                         <div>
-                            <a href="/"><img class="logo" src="/img/logos/3.png" alt="SaniQore Logo" width="128"></a>
+                            <a class="logo" href="/"><img src="/img/logos/3.png" alt="SaniQore Logo" width="128"></a>
+                        </div>
+                        <div>
+                            <h2>We Clean Like It's Ours</h2>
                         </div>
                         <ul>
                             <li><a class="active-link" href="/">Home</a></li>
@@ -199,7 +202,7 @@
                 <div class="container grid">
                     <div class="inner-container grid grid-col-3 grid-ctr-content">
                         <div>
-                            <h2>SaniQore</h2>
+                            <a href="/"><h2>SaniQore</h2></a>
                             <!--<a href="/"><img class="logo" src="/img/logos/3.png" alt="SaniQore Logo" width="128"></a>-->
                             <nav class="top-nav">
                                 <div class="container">
@@ -216,10 +219,19 @@
                         </div>
                         <div>
                             <h2>Office</h2>
-                            <div>
-                                <p><i class="fas fa-map-marker-alt"></i> 3765 Northwest 197 Street, Miami Gardens, Florida, 33055</p>
-                                <p><i class="fas fa-mobile-alt"></i> +1 305-890-3398</p>
-                                <p><i class="fas fa-globe"></i> www.saniqore.com</p>
+                            <div class="office-details">
+                                <div class="grid grid-col-2 grid-ctr-items grid-ctr-content">
+                                    <i class="fas fa-map-marker-alt"></i> 
+                                    <a href="https://goo.gl/maps/GNyfQ7C2s9bFFoXx7" target="_blank"><p>3765 Northwest 197 Street, Miami Gardens, Florida, 33055</p></a>
+                                </div>
+                                <div class="grid grid-col-2 grid-ctr-items grid-ctr-content">
+                                    <i class="fas fa-mobile-alt"></i> 
+                                    <a href="tel:1-305-890-3398"><p>+1 305-890-3398</p></a>
+                                </div>
+                                <div class="grid grid-col-2 grid-ctr-items grid-ctr-content">
+                                    <i class="fas fa-globe"></i> 
+                                    <a href="/"><p>www.saniqore.com</p></a>
+                                </div>
                             </div>
                         </div>
                         <form action="https://formspree.io/f/xknpqzvz" method="POST">
