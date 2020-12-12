@@ -570,6 +570,16 @@ footer .inner-container
     column-gap: 64px;
 }
 
+footer .inner-container > div:first-of-type > a h2
+{
+    transition: all 0.3s ease-in-out 0s;
+}
+
+footer .inner-container > div:first-of-type > a:hover h2
+{
+    transform: scale(1.04);
+}
+
 footer .office-details .grid
 {
     grid-template-columns: 32px 1fr;
@@ -732,6 +742,7 @@ footer form label
     display: block;
     color: inherit;
     font-weight: 400;
+    margin-left: 4px;
 }
 
 footer form > div:first-of-type > label
@@ -945,7 +956,7 @@ section .big-icon
     position: relative;
     background-color: var(--theme-colour-3-transparent-heavy);
     background: linear-gradient(rgba(69,179,68,0.5),rgba(69,179,68,0.25)), url('/img/wipe_counter.jpg') no-repeat fixed;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     height: 840px;
 }
@@ -1444,7 +1455,7 @@ section .big-icon
 .about-html .hero
 {
     height: 832px;
-    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.75)), url("/img/miami_beach.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/miami_beach.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center center;
     margin-top: -192px;
@@ -1479,7 +1490,7 @@ section .big-icon
 .services-html .hero
 {
     height: 832px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("/img/cleanup_tools.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/cleanup_tools.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center center;
     margin-top: -192px;
@@ -1501,7 +1512,7 @@ section .big-icon
 
 .contact-html .hero
 {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 }
 
 .contact-html .hero div
