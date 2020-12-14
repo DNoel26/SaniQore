@@ -438,6 +438,11 @@ header nav .inner-container .active-link::after {
     animation: active_link_border 9s ease-out 1s infinite;
 }
 
+header nav .inner-container .active-link:hover::after,
+header nav .inner-container .active-link:focus::after {
+    animation: none;
+}
+
 header .bottom-nav ul a::after, 
 header nav .inner-container .active-link::after {
     content: "";
@@ -554,7 +559,8 @@ footer .inner-container > div:first-of-type > a h2 {
     transition: all 0.3s ease-in-out 0s;
 }
 
-footer .inner-container > div:first-of-type > a:hover h2 {
+footer .inner-container > div:first-of-type > a:hover h2,
+footer .inner-container > div:first-of-type > a:focus h2  {
     transform: scale(1.04);
 }
 
@@ -618,7 +624,8 @@ footer .bottom-nav .inner-container a::after {
 
 footer .office-details a:hover p::after, 
 footer .office-details a:focus p::after, 
-footer .bottom-nav .inner-container a:hover::after {
+footer .bottom-nav .inner-container a:hover::after,
+footer .bottom-nav .inner-container a:focus::after {
     width: 100%;
 }
 
@@ -1312,7 +1319,8 @@ section .big-icon {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.section-4 .inner-container img:hover, .section-4 .inner-container img:focus {
+.section-4 .inner-container img:hover, 
+.section-4 .inner-container img:focus {
     transform: scale(1.1);
     filter: brightness(100%);
 }
@@ -1340,7 +1348,8 @@ section .big-icon {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.section-5 .inner-container > a:hover, .section-5 .inner-container > a:focus {
+.section-5 .inner-container > a:hover, 
+.section-5 .inner-container > a:focus {
     background-color: var(--theme-colour-1);
 }
 
