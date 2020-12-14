@@ -23,7 +23,7 @@
     --font-family-2: 'Montserrat', sans-serif;
     --font-family-3: 'Open Sans', sans-serif;
     --font-family-4: 'Roboto', sans-serif;
-    --material-card-shadow-1: 0 16px 24px rgba(0,0,0,0.08), 0 8px 8px rgba(0,0,0,0.15);
+    --material-card-shadow-1: 0 16px 24px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.30);
 }
 
 /*****CSS RESET*****/
@@ -519,9 +519,9 @@ header .bottom-nav ul a:focus::before {
 
 footer {
     height: 880px;
-    background: linear-gradient(rgba(0,0,0,0.67),rgba(44,114,43,0.67)), url("/img/water_drop.jpg") no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.67),rgba(44,114,43,0.67)), url("/img/water_drop_2.jpg") no-repeat fixed;
     background-size: cover;
-    background-position: 50% 40%;
+    background-position: center 0;
     color: var(--theme-colour-2);
     z-index: 1000;
     position: relative;
@@ -930,13 +930,14 @@ section .big-icon {
 .section-3 .card-container {
     position: relative;
     transition: all 0.3s ease-in-out 0s;
-    border-top-left-radius: 16px;
+    /*border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    /*margin-top: 96px;*/
+    margin-top: 96px;*/
+    border-radius: 32px;
     margin: auto;
 }
 
-.section-3 .card-container::after {
+/*.section-3 .card-container::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -944,20 +945,20 @@ section .big-icon {
     width: 0;
     border-bottom: 5px solid var(--theme-colour-4);
     transition: all 0.3s ease-in-out 0s;
-}
+}*/
 
 .section-3 .card-container:hover, 
 .section-3 .card-container:focus {
     box-shadow: var(--material-card-shadow-1);
-    transform: scale(1.01);
+    transform: scale(1.04);
     /*height: calc(400px * 1.01);
     width: calc(320px * 1.01);*/
 }
 
-.section-3 .card-container:hover::after, 
+/*.section-3 .card-container:hover::after, 
 .section-3 .card-container:focus::after {
     width: 100%;
-}
+}*/
 
 .section-3 .card-content {
     height: 448px;
@@ -978,22 +979,22 @@ section .big-icon {
 }   
 
 @keyframes wipe {
-    0% {background-position: 100% -10%;}
+    0% {background-position: -8px 100%;}
     10% {background-position: -32px 300%;}
-    20% {background-position: -16px 1000%;}
-    30% {background-position: 32px 600%;}
-    40% {background-position: 16px -10%;}
-    50% {background-position: 100% -10%;}
-    60% {background-position: 16px -10%;}
-    70% {background-position: 32px 240%;}
-    80% {background-position: -16px 240%;}
-    90% {background-position: -32px 125%;}
-    100% {background-position: 100% -10%;}
+    20% {background-position: -24px 1000%;}
+    30% {background-position: -4px 600%;}
+    40% {background-position: -16px 10%;}
+    50% {background-position: -32px -32px;}
+    60% {background-position: -24px -96px;}
+    70% {background-position: -4px -32px;}
+    80% {background-position: -32px 10%;}
+    90% {background-position: -16px 20%;}
+    100% {background-position: -8px 100%;}
 }
 
 .section-3 .card-container:nth-child(2) {
     background: url("/img/wipe_nobg.png") no-repeat;
-    background-position: -20px -10%;
+    background-position: -8px 100%;
     background-size: cover;
     /*filter: blur(2px);*/
     transition: all 0.6s ease-in-out 0s;
