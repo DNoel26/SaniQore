@@ -1,21 +1,21 @@
 /*****CSS VARIABLE DECLARATION*****/
 
 :root {   
-    --theme-colour-1: #050D05; /*rgb(5,13,5)*/
-    --theme-colour-2:#f1faf1; /*rgb(241,250,241)*/
+    --theme-colour-1: #000; /*rgb(5,13,5)*/
+    --theme-colour-2:#fff; /*rgb(241,250,241) f1faf1*/
     --theme-colour-3: #45b344; /*rgb(69,179,68)*/
     --theme-colour-4: #e57338; /*rgb(229,114,56)*/ 
     --theme-colour-3-dark: #2C722B; /*44,114,43*/
-    --theme-colour-1-transparent: rgba(5,13,5,0.5);
-    --theme-colour-2-transparent: rgba(241,250,241,0.5);
+    --theme-colour-1-transparent: rgba(0,0,0,0.5);
+    --theme-colour-2-transparent: rgba(255,255,255,0.5);
     --theme-colour-3-transparent: rgba(69,179,68,0.5);
     --theme-colour-4-transparent: rgba(229,114,56,0.5);
-    --theme-colour-1-transparent-light: rgba(5,13,5,0.15);
-    --theme-colour-2-transparent-light: rgba(241,250,241,0.15);
+    --theme-colour-1-transparent-light: rgba(0,0,0,0.15);
+    --theme-colour-2-transparent-light: rgba(255,255,255,0.15);
     --theme-colour-3-transparent-light: rgba(69,179,68,0.15);
     --theme-colour-4-transparent-light: rgba(229,114,56,0.15);
-    --theme-colour-1-transparent-heavy: rgba(5,13,5,0.85);
-    --theme-colour-2-transparent-heavy: rgba(241,250,241,0.85);
+    --theme-colour-1-transparent-heavy: rgba(0,0,0,0.85);
+    --theme-colour-2-transparent-heavy: rgba(255,255,255,0.85);
     --theme-colour-3-transparent-heavy: rgba(69,179,68,0.85);
     --theme-colour-4-transparent-heavy: rgba(229,114,56,0.85);
     --theme-colour-3-dark-transparent-heavy: rgb(44,114,43,0.85);
@@ -519,7 +519,7 @@ header .bottom-nav ul a:focus::before {
 
 footer {
     height: 880px;
-    background: linear-gradient(rgba(0,0,0,0.67),rgba(44,114,43,0.67)), url("/img/water_drop_2.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.33),rgba(44,114,43,0.67)), url("/img/water_drop_2.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center 0;
     color: var(--theme-colour-2);
@@ -617,7 +617,7 @@ footer .bottom-nav .inner-container a::after {
     margin-left: auto;
     margin-right: auto;
     border-bottom: 2px solid var(--theme-colour-2);
-    width: 2px;
+    width: 0;
     border-radius: 4px;
     transition: all 0.4s ease-in-out 0s;
 }
@@ -935,6 +935,7 @@ section .big-icon {
     margin-top: 96px;*/
     border-radius: 32px;
     margin: auto;
+    opacity: 90%;
 }
 
 /*.section-3 .card-container::after {
@@ -950,7 +951,8 @@ section .big-icon {
 .section-3 .card-container:hover, 
 .section-3 .card-container:focus {
     box-shadow: var(--material-card-shadow-1);
-    transform: scale(1.04);
+    transform: scale(1.04);    
+    opacity: 100%;
     /*height: calc(400px * 1.01);
     width: calc(320px * 1.01);*/
 }
@@ -1253,7 +1255,7 @@ section .big-icon {
 }
 
 .custom-shape-divider-top-1607223667 .shape-fill {
-    fill: #F1FAF1;
+    fill: var(--theme-colour-2);
 }
 
 .custom-shape-divider-bottom-1607275863 {
@@ -1274,7 +1276,7 @@ section .big-icon {
 }
 
 .custom-shape-divider-bottom-1607275863 .shape-fill {
-    fill: #F1FAF1;
+    fill: var(--theme-colour-2);
 }
 
 /*****SECTION 4 - INDEX*****/
@@ -1297,20 +1299,20 @@ section .big-icon {
     align-items: center;
     justify-items: center;
     text-align: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 }
 
-.section-4 .inner-container > div div {
+.section-4 .inner-container > div > div:first-of-type {
     overflow: hidden;
     border-radius: 32px;
 }
 
 .section-4 .inner-container >  div:nth-of-type(odd) > div:first-of-type {
-    order: 0;
+    order: 0;    
 }
 
 .section-4 .inner-container >  div:nth-of-type(even) > div:first-of-type {
-    order: 1;
+    order: 1;    
 }
 
 .section-4 .inner-container img {
@@ -1329,10 +1331,11 @@ section .big-icon {
 /*****SECTION 5 - INDEX*****/
 
 .section-5 {
+    position: relative;
     background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0)), url("/img/office_desk.jpg") no-repeat fixed;
     background-position: 50% 100%;
     background-size: cover;
-    height: 720px;
+    height: 840px;
 }
 
 .section-5 .inner-container > h2 {
@@ -1362,7 +1365,7 @@ section .big-icon {
 
 .about-html .hero {
     height: 832px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/miami_beach.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(128,98,98,0.33), rgba(0,0,0,0.67)), url("/img/miami_beach.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center center;
     margin-top: -192px;
@@ -1394,7 +1397,7 @@ section .big-icon {
 
 .services-html .hero {
     height: 832px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/cleanup_tools.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(128,98,98,0.45), rgba(0,0,0,0.67)), url("/img/cleanup_tools.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center center;
     margin-top: -192px;
